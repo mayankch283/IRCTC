@@ -25,11 +25,17 @@ public class UserBookingService {
 
     public UserBookingService(User user) throws IOException {
         this.user = user;
-        File users  = new File(USERS_PATH);
-        userList = objectMapper.readValue(users, new TypeReference<List<User>>() {});
+        loadUsers();
 
     }
 
+    public UserBookingService() throws IOException{
+        loadUsers();
+    }
+
+    public void loadUsers()throws IOException{
+        userList = objectMapper.readValue(new File(USERS_PATH), new TypeReference<List<User>>() {});
+    }
 
     public Boolean loginUser(){
         Optional<User> foundUser = userList.stream().filter(user1->{
