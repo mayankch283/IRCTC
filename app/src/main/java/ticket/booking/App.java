@@ -78,12 +78,13 @@ public class App {
                     int index = 1;
                     for (Train t: trains){
                         System.out.println(index+" Train id : "+t.getTrainId());
-//                        for (Map.Entry<String, String> entry: t.getStationTimes().entrySet()){
-//                            System.out.println("station "+entry.getKey()+" time: "+entry.getValue());
-//                        }
+                        for (Map.Entry<String, String> entry: t.getStationTimes().entrySet()){
+                            System.out.println("station "+entry.getKey()+" time: "+entry.getValue());
+                        }
+//                        System.out.println(t.getStationTimes());
                     }
                     System.out.println("Select a train by typing 1,2,3...");
-                    trainSelectedForBooking = trains.get(scanner.nextInt());
+                    trainSelectedForBooking = trains.get(scanner.nextInt()-1);
                     break;
                 case 5:
                     System.out.println("Select a seat out of these seats");

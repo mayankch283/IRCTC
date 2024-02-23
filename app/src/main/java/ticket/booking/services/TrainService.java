@@ -19,8 +19,8 @@ public class TrainService {
     private static final String TRAIN_DB_PATH = "/home/mayankch283/IdeaProjects/IRCTC/app/src/main/java/ticket/booking/localDb/trains.json";
 
     public TrainService() throws IOException {
-        File trains = new File(TRAIN_DB_PATH);
-        trainList = objectMapper.readValue(trains, new TypeReference<List<Train>>() {});
+        trainList = objectMapper.readValue(new File(TRAIN_DB_PATH), new TypeReference<>() {
+        });
     }
 
     public List<Train> searchTrains(String source, String destination) {
