@@ -25,9 +25,9 @@ How It Works
     Users can search for trains by specifying the source and destination stations.
     The system returns a list of available trains with detailed station timings.
 
-*Seat Booking:
+* Seat Booking:
     Users can view and select available seats on their chosen train.
     The system checks the availability and books the seat if it's free.
 
-*Booking Management:
+* Booking Management:
     Users can view their booking history, see the trains they have booked, and manage their reservations.
