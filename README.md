@@ -17,11 +17,11 @@ Features
 
 How It Works
 
-*User Sign Up & Login:
+* User Sign Up & Login:
     New users can sign up by providing a username and password. The password is hashed for secure storage.
     Existing users can log in to access the booking features.
 
-*Train Search:
+* Train Search:
     Users can search for trains by specifying the source and destination stations.
     The system returns a list of available trains with detailed station timings.
 
